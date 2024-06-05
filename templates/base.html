@@ -10,7 +10,7 @@
     <meta content="ENL GOLD PROJECT" name="description">
 
     <!-- Favicon -->
-    <link href="images/enl logo.png" rel="icon">
+    <link href="{% static 'images/enl logo.png' %}" rel="icon">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -47,10 +47,10 @@
                 <div class="row align-items-center">
                     <div class="col-lg-4 col-md-12">
                         <div class="logo">
-                            <a href="index.html">
+                            <a href="{% url 'core:index' %}">
                                 <h3>ENL <span class="animate">GOLD</span> PROJECT</h3>
-                                <a href="#">
-                                    <img src="images/enl logo.png" alt="ENL Logo">
+                                <a href="/">
+                                    <img src="{% static 'images/enl logo.png' %}" alt="ENL Logo">
                                 </a>
 
                             </a>

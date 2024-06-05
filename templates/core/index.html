@@ -11,12 +11,12 @@
 
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="images/Gate 2.jpg" alt="Carousel Image">
+            <img src="{% static 'images/gate_2.jpg' %}" alt="Carousel Image">
             <div class="carousel-caption">
 
                 <p class="animated fadeInRight">YOUR GO-TO GOLD MINING EXPERTS</p>
                 <h1 class="animated fadeInLeft">CORPORATE MINING EXPLORATION</h1>
-                <a class="btn animated fadeInUp" href="index.html">WELCOME TO ENL GOLD PROJECT</a>
+                <a class="btn animated fadeInUp" href="{% url 'core:about' %}">WELCOME TO ENL GOLD PROJECT</a>
 
             </div>
 
@@ -24,16 +24,16 @@
         </div>
 
         <div class="carousel-item">
-            <img src="img/SITE 4 (1).JPG" alt="Carousel Image">
+            <img src="{% static 'img/carousel_image_1.jpg' %}" alt="Carousel Image">
             <div class="carousel-caption">
 
                 <p class="animated fadeInRight">PIONERING PROGRESS</p>
                 <h1 class="animated fadeInLeft">SUSTAINABLE MINING SOLUTIONS</h1>
-                <a class="btn animated fadeInUp" href="about.html">LEARN MORE ABOUT US</a>
+                <a class="btn animated fadeInUp" href="{% url 'core:about' %}">LEARN MORE ABOUT US</a>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="img/site5.JPG" alt="Carousel Image">
+            <img src="{% static 'img/carousel_image_2.jpg' %}" alt="Carousel Image">
             <div class="carousel-caption">
 
                 <p class="animated fadeInRight">EXCELLENCE IN EXPLORATION</p>
