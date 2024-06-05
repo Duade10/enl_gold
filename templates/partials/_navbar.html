@@ -1,0 +1,74 @@
+{% load static %}
+<!-- Nav Bar Start -->
+<div class="nav-bar">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <a href="#" class="navbar-brand">MENU</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="about.html" id="aboutLink">About</a>
+                        <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <a class="dropdown-item" href="service.html">Our Operations</a>
+                            <a class="dropdown-item" href="about.html#our-story">Our Story</a>
+                            <a class="dropdown-item" href="about.html#health-safety">Health and Safety</a>
+                            <a class="dropdown-item" href="about.html#faq">FAQs</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team.html">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="no-available.html" id="aboutLink">Career</a>
+                        <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <a class="dropdown-item" href="application.html">Application Form</a>
+                            <a class="dropdown-item" href="no-available.html">Available JObs</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="media.html" id="aboutLink">Media</a>
+                        <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <a class="dropdown-item" href="media.html">Our Equipments</a>
+                            <a class="dropdown-item" href="media.html">Photo/Video Albums</a>
+
+                        </div>
+                    </li>
+
+                </ul>
+                <div class="ml-auto">
+                    <a class="btn" href="contact.html">Contact Us</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- Nav Bar End -->
+
+<script>
+    // Initialize dropdown menus
+    $('.dropdown-toggle').dropdown();
+
+    // Add hover event listener for "About" dropdown
+    $('#aboutLink').hover(
+        function () {
+            $(this).next('.dropdown-menu').stop(true, true).delay(200).fadeIn();
+        },
+        function () {
+            $(this).next('.dropdown-menu').stop(true, true).delay(200).fadeOut();
+        }
+    );
+
+    $('.dropdown-toggle').dropdown();
+</script>
