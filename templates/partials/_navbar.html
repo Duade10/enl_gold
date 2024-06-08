@@ -27,13 +27,13 @@
                         <a class="nav-link" href="{% url 'core:team' %}">Team</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="events.html">Events</a>
+                        <a class="nav-link" href="{% url 'core:events' %}">Events</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="no-available.html" id="aboutLink">Career</a>
+                        <a class="nav-link" href="{% url 'core:career' %}" id="aboutLink">Career</a>
                         <div class="dropdown-menu" aria-labelledby="aboutDropdown">
                             <a class="dropdown-item" href="application.html">Application Form</a>
-                            <a class="dropdown-item" href="no-available.html">Available JObs</a>
+                            <a class="dropdown-item" href="{% url 'core:career' %}">Available Jobs</a>
 
                         </div>
                     </li>
