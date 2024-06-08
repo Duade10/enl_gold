@@ -43,51 +43,19 @@
 
 <div class="container">
     <h1 class="text-center">Available Jobs</h1>
+    {% if is_jobs_exist %}
+    {% for job in jobs %}
     <div class="job-listing">
-        <div class="job-title">Geophysist</div>
+        <div class="job-title">{{job.title}}</div>
         <div class="job-details">
-            <p><strong>Location:</strong>Osun State</p>
-            <p><strong>Type:</strong> Full-Time</p>
-            <p><strong>Description:</strong> We are looking for a skilled Geo-Physist to join our team.</p>
+            <p><strong>Location:</strong>{{job.location}}</p>
+            <p><strong>Type:</strong> {{job.get_job_type_display}}</p>
+            <p><strong>Description:</strong> {{job.description}}</p>
             <a href="application.html" class="btn btn-primary apply-button">Apply Now</a>
         </div>
     </div>
-    <div class="job-listing">
-        <div class="job-title">Technologist / Technician</div>
-        <div class="job-details">
-            <p><strong>Location:</strong>Osun State</p>
-            <p><strong>Type:</strong> Full-Time</p>
-            <p><strong>Description:</strong> We are looking for a skilled Technician to join our team.</p>
-            <a href="application.html" class="btn btn-primary apply-button">Apply Now</a>
-        </div>
-    </div>
-    <div class="job-listing">
-        <div class="job-title">Geochemist</div>
-        <div class="job-details">
-            <p><strong>Location:</strong>Osun</p>
-            <p><strong>Type:</strong> Full-Time</p>
-            <p><strong>Description:</strong>e are looking for a skilled Geochemist to join our team. </p>
-            <a href="application.html" class="btn btn-primary apply-button">Apply Now</a>
-        </div>
-    </div>
-    <div class="job-listing">
-        <div class="job-title">Mining Geologist</div>
-        <div class="job-details">
-            <p><strong>Location:</strong> Osun-State</p>
-            <p><strong>Type:</strong> Full time</p>
-            <p><strong>Description:</strong> We are looking for a Mining Geologist to join our team </p>
-            <a href="application.html" class="btn btn-primary apply-button">Apply Now</a>
-        </div>
-    </div>
-    <div class="job-listing">
-        <div class="job-title">Database Geologist</div>
-        <div class="job-details">
-            <p><strong>Location:</strong> Osun-State</p>
-            <p><strong>Type:</strong> Full time</p>
-            <p><strong>Description:</strong> We are looking for a Database Geologist to join our team </p>
-            <a href="application.html" class="btn btn-primary apply-button">Apply Now</a>
-        </div>
-    </div>
+    {% endfor %}
+    {% endif %}
     <!-- Add more job listings here -->
 </div>
 

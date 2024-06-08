@@ -29,6 +29,8 @@ class Job(AbstractTimestamp):
     )
     description: str = models.TextField(_("Job Description"))
 
+    is_active: bool = models.BooleanField(_("Is Job Active"), default=True)
+
     class Meta:
         verbose_name = _("Job")
         verbose_name_plural = _("Jobs")
