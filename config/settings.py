@@ -38,7 +38,8 @@ DJANGO_APPS = [
 ]
 
 CUSTOM_APPS = [
-    'core.apps.CoreConfig'
+    'core.apps.CoreConfig',
+    'jobs.apps.JobsConfig'
 ]
 
 INSTALLED_APPS = DJANGO_APPS + CUSTOM_APPS
