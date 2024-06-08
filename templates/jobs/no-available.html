@@ -1,5 +1,36 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block style %}
+<style>
+    .message-container {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    p {
+
+        margin-bottom: 20px;
+    }
+
+    .apply-button {
+        background-color: #ff6600;
+        border-color: #cd8351;
+        margin-top: 20px;
+
+    }
+
+    .apply-button:hover {
+        background-color: #cd8351;
+        border-color: #ff6600;
+    }
+</style>
+{% endblock style %}
 {% block content %}
 <br>
 <br>
@@ -11,7 +42,7 @@
         <p>We currently do not have any available job openings. However, we encourage you to use the application form to
             send us your CV for future opportunities. We will keep your information on file and contact you when a
             position that matches your qualifications becomes available.</p>
-        <a href="{% url 'core:application'}" class="btn btn-primary apply-button">Submit Your CV</a>
+        <a href="{% url 'jobs:application' %}" class="btn btn-primary apply-button">Submit Your CV</a>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

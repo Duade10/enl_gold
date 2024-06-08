@@ -26,12 +26,3 @@ class EventView(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'core/events.html')
 
-
-class CareerView(View):
-    def get(self, request, *args, **kwargs):
-        return render(request, 'core/no-available.html')
-
-
-class ApplicationView(View):
-    def get(self, request, *args, **kwargs):
-        return render(request, 'core/available.html')

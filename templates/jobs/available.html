@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+<style>
+    h1 {
+        text-align: center;
+        font-weight: bolder;
+        width: 100%;
+        color: #ff6600;
+
+    }
+
+    .job-listing {
+        margin-bottom: 20px;
+    }
+
+    .job-title {
+        font-weight: bold;
+        font-size: 1.2em;
+        color: #030f27;
+    }
+
+    .job-details {
+        margin-top: 10px;
+        color: #030f27;
+    }
+
+    .apply-button {
+        margin-top: 15px;
+        background-color: #ff6600;
+        border-color: #cd8351;
+    }
+
+    .apply-button:hover {
+        background-color: #cd8351;
+        border-color: #ff6600;
+    }
+</style>
+{% endblock style %}
+{% block content %}
+<br>
+<br>
+
+<div class="container">
+    <h1 class="text-center">Available Jobs</h1>
+    {% if is_jobs_exist %}
+    {% for job in jobs %}
+    <div class="job-listing">
+        <div class="job-title">{{job.title}}</div>
+        <div class="job-details">
+            <p><strong>Location:</strong>{{job.location}}</p>
+            <p><strong>Type:</strong> {{job.get_job_type_display}}</p>
+            <p><strong>Description:</strong> {{job.description}}</p>
+            <a href="{% url 'jobs:application' %}" class="btn btn-primary apply-button">Apply Now</a>
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+    <!-- Add more job listings here -->
+</div>
+
+{% endblock content %}
