@@ -38,4 +38,4 @@ class JobsView(View):
 
 class ApplicationView(View):
     def get(self, request, *args, **kwargs):
-        return render(request, 'job/application.html')
+        return render(request, 'jobs/application.html')
