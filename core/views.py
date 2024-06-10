@@ -22,7 +22,3 @@ class TeamView(View):
         return render(request, 'core/team.html')
 
 
-class EventView(View):
-    def get(self, request, *args, **kwargs):
-        return render(request, 'core/events.html')
-
