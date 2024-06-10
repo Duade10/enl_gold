@@ -38,81 +38,21 @@
 <div class="container">
     <h1 class="media-header">Our Machinery and Equipment</h1>
 
+    {% if is_machine_and_equipments_exist %}
     <div class="row">
+        {% for machine in machine_and_equipments %}
         <div class="col-md-4">
             <div class="card media-card">
-                <img src="images/CAT Excavator.jpg" class="card-img-top" alt="Excavator">
+                <img src="{{machine.picture.url}}" class="card-img-top" alt="Excavator">
                 <div class="card-body">
-                    <h5 class="media-card-title">Excavator</h5>
-                    <p class="card-text">Our state-of-the-art excavators are used for clearing sites and removing
-                        overburden.</p>
+                    <h5 class="media-card-title">{{machine.name}}</h5>
+                    <p class="card-text">{{machine.description}}</p>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card media-card">
-                <img src="images/Payloader.jpg" class="card-img-top" alt="Bulldozer">
-                <div class="card-body">
-                    <h5 class="media-card-title">Pay Loader</h5>
-                    <p class="card-text">Our Payloaders are essential for mining operations, as they are used to load
-                        excavated materials onto haul trucks for transportation.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card media-card">
-                <img src="images/Grader.jpg" class="card-img-top" alt="Grader">
-                <div class="card-body">
-                    <h5 class="media-card-title">Grader</h5>
-                    <p class="card-text">Graders are essential for levelling surfaces and preparing the ground for
-                        mining operations.</p>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
-
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card media-card">
-                <img src="images/Drilling Rig.JPG" class="card-img-top" alt="Drilling Rig">
-                <div class="card-body">
-                    <h5 class="media-card-title">DRILLING RIG</h5>
-                    <p class="card-text">Our drilling rigs are used to explore and sample mineral deposits in the
-                        licensed area.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card media-card">
-                <img src="images/Tipper.jpg" class="card-img-top" alt="Processing Plant">
-                <div class="card-body">
-                    <h5 class="media-card-title">TIPPER</h5>
-                    <p class="card-text">Tipper trucks, also known as dump trucks, are used to transport loose materials
-                        such as ore, gravel, sand, and overburden. </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card media-card">
-                <img src="images/LOW BED.jpg" class="card-img-top" alt="Conveyor Belt">
-                <div class="card-body">
-                    <h5 class="media-card-title">LOW BED</h5>
-                    <p class="card-text">Low bed trailers are designed to transport heavy mining equipment and machinery
-                        safely and efficiently.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card media-card">
-                <img src="images/Thrommel.jpg" class="card-img-top" alt="Conveyor Belt">
-                <div class="card-body">
-                    <h5 class="media-card-title">TROMMEL</h5>
-                    <p class="card-text">Trommels are crucial for the sorting and separation processes in mining. They
-                        are used to separate valuable minerals from waste rock and other materials.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% endif %}
 
 </div>
 <!--Media End -->

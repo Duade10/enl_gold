@@ -7,7 +7,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls', namespace='core')),
     path('jobs/', include('jobs.urls', namespace='jobs')),
-    path('medias/', include('medias.urls', namespace='medias'))
+    path('medias/', include('medias.urls', namespace='medias')),
+    path('events/', include('events.urls', namespace='events'))
 ]
 
 if settings.DEBUG:
