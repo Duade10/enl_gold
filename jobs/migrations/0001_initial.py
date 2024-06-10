@@ -4,7 +4,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -19,7 +18,9 @@ class Migration(migrations.Migration):
                 ('updated_at', models.DateTimeField(auto_now=True)),
                 ('title', models.CharField(max_length=100, verbose_name='Job Title')),
                 ('location', models.CharField(blank=True, max_length=100, verbose_name='Job Location')),
-                ('job_type', models.CharField(choices=[('FT', 'Full-Time'), ('PT', 'Part-Time'), ('CT', 'Contract'), ('IN', 'Internship'), ('FL', 'Freelance')], default='FT', max_length=2, verbose_name='Job Type')),
+                ('job_type', models.CharField(
+                    choices=[('FT', 'Full-Time'), ('PT', 'Part-Time'), ('CT', 'Contract'), ('IN', 'Internship'),
+                             ('FL', 'Freelance')], default='FT', max_length=2, verbose_name='Job Type')),
                 ('description', models.TextField(verbose_name='Job Description')),
             ],
             options={
