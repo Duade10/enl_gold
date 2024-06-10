@@ -14,3 +14,11 @@ class MachineAndEquipment(AbstractTimestamp):
 
     def __str__(self):
         return self.name
+
+
+class PhotoAlbum(AbstractTimestamp):
+    picture = models.ImageField(_("Picture"), upload_to="photo-album/")
+    short_description = models.CharField(_("Short Description"), max_length=100)
+
+    def __str__(self):
+        return self.short_description
