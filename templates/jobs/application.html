@@ -45,29 +45,25 @@
 <br>
 <div class="container form-container">
     <h1>APPLICATION FORM </h1>
-    <form id="applicationForm" action="submit_application.php" method="post" enctype="multipart/form-data">
+    <form id="applicationForm" action="{% url 'jobs:application' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
         <div class="form-section">
             <h7>Personal Information</h7>
             <div class="form-group">
-                <label for="firstName">First Name</label>
-                <input type="text" class="form-control" id="firstName" name="firstName" required>
+                <label for="firstName">{{form.first_name.label}}</label>
+                {{form.first_name}}
             </div>
             <div class="form-group">
-                <label for="lastName">Last Name</label>
-                <input type="text" class="form-control" id="lastName" name="lastName" required>
+                <label for="lastName">{{form.last_name.label}}</label>
+                {{form.last_name}}
             </div>
             <div class="form-group">
-                <label for="dateOfBirth">Date of Birth</label>
-                <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" required>
+                <label for="dateOfBirth">{{form.date_of_birth.label}}</label>
+                {{form.date_of_birth}}
             </div>
             <div class="form-group">
-                <label for="gender">Gender</label>
-                <select class="form-control" id="gender" name="gender" required>
-                    <option value="" disabled selected>Select your gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select>
+                <label for="gender">{{form.gender.label}}</label>
+                {{form.gender}}
             </div>
 
         </div>
@@ -75,34 +71,28 @@
         <div class="form-section">
             <h7>Contact Details</h7>
             <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
+                <label for="email">{{form.email.label}}</label>
+                {{form.email}}
             </div>
             <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" class="form-control" id="phone" name="phone" required>
+                <label for="phone">{{form.phone_number.label}}</label>
+                {{form.phone_number}}
             </div>
             <div class="form-group">
-                <label for="address">Address</label>
-                <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+                <label for="address">{{form.address.label}}</label>
+                {{form.address}}
             </div>
         </div>
 
         <div class="form-section">
             <h7>Education</h7>
             <div class="form-group">
-                <label for="education">Highest Level of Education</label>
-                <select class="form-control" id="education" name="education" required>
-                    <option value="">Select</option>
-                    <option value="highschool">High School</option>
-                    <option value="bachelor">Bachelor's Degree</option>
-                    <option value="master">Master's Degree</option>
-                    <option value="phd">PhD</option>
-                </select>
+                <label for="education">{{form.highest_education_level.label}}</label>
+                {{form.highest_education_level}}
             </div>
             <div class="form-group">
-                <label for="school">School/University</label>
-                <input type="text" class="form-control" id="school" name="school" required>
+                <label for="school">{{form.school.label}}</label>
+                {{form.school}}
             </div>
         </div>
 
@@ -110,7 +100,7 @@
             <h7>Work Experience</h7>
             <div class="form-group">
                 <label for="experience">Describe Your Work Experience</label>
-                <textarea class="form-control" id="experience" name="experience" rows="5" required></textarea>
+                {{form.work_experience}}
             </div>
         </div>
 
@@ -118,8 +108,7 @@
             <h7>Resume</h7>
             <div class="form-group">
                 <label for="resume">Upload Your Resume</label>
-                <input type="file" class="form-control-file" id="resume" name="resume" accept=".pdf,.doc,.docx"
-                    required>
+                {{form.resume}}
             </div>
         </div>
 

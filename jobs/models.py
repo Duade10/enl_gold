@@ -63,7 +63,7 @@ class Application(AbstractTimestamp):
 
     first_name = models.CharField(_("First Name"), max_length=50)
     last_name = models.CharField(_("Last Name"), max_length=50)
-    date_of_birth = models.DateTimeField(_("Date Of Birth"))
+    date_of_birth = models.DateField(_("Date Of Birth"))
     gender = models.CharField(
         _("Gender"),
         max_length=1,
@@ -79,6 +79,7 @@ class Application(AbstractTimestamp):
     )
     school = models.CharField(_("School/University"), max_length=100)
     work_experience = models.TextField(_("Work Experience"))
+    resume = models.FileField(_("Resume"), upload_to="resume/", blank=True, null=True)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}'s Profile"
