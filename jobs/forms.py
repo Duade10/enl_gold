@@ -1,9 +1,9 @@
 from django import forms
+
 from .models import Application
 
 
 class ApplicationForm(forms.ModelForm):
-
     date_of_birth = forms.DateTimeField(widget=forms.TextInput(attrs={"type": "date"}))
 
     class Meta:

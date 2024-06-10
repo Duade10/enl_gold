@@ -38,10 +38,10 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="media.html" id="aboutLink">Media</a>
+                        <a class="nav-link" href="{% url 'medias:medias' %}" id="aboutLink">Media</a>
                         <div class="dropdown-menu" aria-labelledby="aboutDropdown">
-                            <a class="dropdown-item" href="media.html">Our Equipments</a>
-                            <a class="dropdown-item" href="media.html">Photo/Video Albums</a>
+                            <a class="dropdown-item" href="{% url 'medias:medias' %}">Our Equipments</a>
+                            <a class="dropdown-item" href="{% url 'medias:photo_album' %}">Photo/Video Albums</a>
 
                         </div>
                     </li>
