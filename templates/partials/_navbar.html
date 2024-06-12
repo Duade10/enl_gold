@@ -24,7 +24,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'core:team' %}">Team</a>
+                        <a class="nav-link" href="{% url 'team:team' %}">Team</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'events:events' %}">Events</a>
@@ -48,7 +48,7 @@
 
                 </ul>
                 <div class="ml-auto">
-                    <a class="btn" href="contact.html">Contact Us</a>
+                    <a class="btn" href="{% url 'contacts:contact' %}">Contact Us</a>
                 </div>
             </div>
         </nav>
