@@ -43,7 +43,8 @@ CUSTOM_APPS = [
     'jobs.apps.JobsConfig',
     'medias.apps.MediasConfig',
     'events.apps.EventsConfig',
-    'team.apps.TeamConfig'
+    'team.apps.TeamConfig',
+    'contacts.apps.ContactsConfig'
 ]
 
 INSTALLED_APPS = DJANGO_APPS + CUSTOM_APPS

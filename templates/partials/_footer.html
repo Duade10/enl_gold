@@ -22,7 +22,7 @@
             <div class="col-md-6 col-lg-3">
                 <div class="footer-link">
                     <h2>Our Operations</h2>
-                    <a href="">Exploration Operation</a>
+                    <a href="{% url 'core:service' %}">Exploration Operation</a>
                     <a href="">Technical Report </a>
                     <a href="">Geological Advice</a>
                     <a href="">Geological Surveys</a>
@@ -33,10 +33,10 @@
             <div class="col-md-6 col-lg-3">
                 <div class="footer-link">
                     <h2> Pages</h2>
-                    <a href="about.html">About Us</a>
-                    <a href="team.html">Team</a>
-                    <a href="application.html">Career</a>
-                    <a href="media.html">Media</a>
+                    <a href="{% url 'core:about' %}">About Us</a>
+                    <a href="{% url 'team:team' %}">Team</a>
+                    <a href="{% url 'jobs:jobs' %}">Career</a>
+                    <a href="{% url 'medias:medias' %}">Media</a>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
